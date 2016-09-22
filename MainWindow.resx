@@ -243,12 +243,6 @@
         gg==
 </value>
   </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>You can easily back up your world by selecting it in the list on the left and clicking 'Generate backup' (the button in bold).
-If you want to restore a backup, click 'Restore backup' and select the date to which you want to restore to.
-
-You can also import backups from other people. To do that, click 'Import backup' and select the .scrapbackup file. To export backups yourself, click 'Export backup' and save it to a folder, for example your Desktop or your Documents folder.</value>
-  </data>
   <metadata name="modLogoImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -377,6 +371,12 @@ You can also import backups from other people. To do that, click 'Import backup'
         gg==
 </value>
   </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>You can easily back up your world by selecting it in the list on the left and clicking 'Generate backup' (the button in bold).
+If you want to restore a backup, click 'Restore backup' and select the date to which you want to restore to.
+
+You can also import backups from other people. To do that, click 'Import backup' and select the .scrapbackup file. To export backups yourself, click 'Export backup' and save it to a folder, for example your Desktop or your Documents folder.</value>
+  </data>
   <data name="label5.Text" xml:space="preserve">
     <value>© 2016 Xesau
 
@@ -387,6 +387,9 @@ Special thanks to:
 - Axolot for this great game
 - The support from everyone on #modding</value>
   </data>
+  <metadata name="ttContributors.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>173, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAEAIABoBAAAVgAAACAgAAABACAAqBAAAL4EAAAwMAAAAQAgAKglAABmFQAAQEAAAAEA

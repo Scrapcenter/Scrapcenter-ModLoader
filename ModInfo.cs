@@ -22,6 +22,7 @@ namespace Scrapcenter
         public string GameVersion;
         public string LoaderVersion;
 
+        public List<string> Contributors;
         public List<string> Dependencies;
 
         public Image ModIcon;
@@ -70,6 +71,14 @@ namespace Scrapcenter
                 dynamic dependencies = modinfo["dependencies"];
                 foreach (object o in dependencies)
                     Dependencies.Add(o.ToString());
+            }
+
+            this.Contributors = new List<string>();
+            if (modinfo.ContainsKey("contributors"))
+            {
+                dynamic contributors = modinfo["contributors"];
+                foreach (object o in contributors)
+                    Contributors.Add(o.ToString());
             }
         }
 

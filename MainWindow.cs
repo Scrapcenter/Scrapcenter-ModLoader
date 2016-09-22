@@ -254,24 +254,22 @@ namespace Scrapcenter
 
             if (ModSelected)
             {
-                lblModVersion.Text = this.CurrentMod.ModVersion;
-                lblModName.Text = this.CurrentMod.ModName;
-                lblLoaderVersion.Text = this.CurrentMod.LoaderVersion;
-                lblGameVersion.Text = this.CurrentMod.GameVersion;
+                lblModVersion.Text = this.CurrentMod.ModVersion.Replace("&", "&&");
+                lblModName.Text = this.CurrentMod.ModName.Replace("&", "&&");
+                lblLoaderVersion.Text = this.CurrentMod.LoaderVersion.Replace("&", "&&");
+                lblGameVersion.Text = this.CurrentMod.GameVersion.Replace("&", "&&");
                 pbModIcon.Image = this.CurrentMod.ModIcon ?? Properties.Resources.logo;
                 llblAuthorURL.Visible = this.CurrentMod.AuthorURL != "";
-                lblAuthor.Visible = !lblAuthor.Visible;
+                lblAuthor.Visible = !llblAuthorURL.Visible;
 
-                lblAuthor.Text = llblAuthorURL.Text = this.CurrentMod.AuthorName;
+                lblAuthor.Text = llblAuthorURL.Text = this.CurrentMod.AuthorName.Replace("&", "&&") + (this.CurrentMod.Contributors.Count == 0 ? "" : " (+ " + this.CurrentMod.Contributors.Count + ")");
+                llblAuthorURL.Visible = this.CurrentMod.AuthorURL != "";
 
-                llblAuthorURL.Visible = this.CurrentMod.ModURL != "";
-
-                foreach (string d in this.CurrentMod.Dependencies)
-                {
-                    Console.WriteLine("d=" + d);
-                }
-                foreach (string i in this.ModIDs)
-                    Console.WriteLine("id=" + i);
+                string toolTipText = this.CurrentMod.Contributors.Count == 0
+                    ? ""
+                    : "Contributors: " + string.Join(", ", this.CurrentMod.Contributors.ToArray());
+                ttContributors.SetToolTip(lblAuthor, toolTipText);
+                ttContributors.SetToolTip(llblAuthorURL, toolTipText);
 
                 if (this.CurrentMod.Dependencies.Where((dep) => !this.ModIDs.Contains(dep)).Count() == 0)
                 {
@@ -647,7 +645,6 @@ namespace Scrapcenter
 
                     // Write everything to the game directory
                     GameWriter writer = new GameWriter(Properties.Settings.Default.ScrapMechanicFolder);
-                    //GameWriter writer = new GameWriter(@"C:\Users\Aron\Desktop\ScrapMechanicTest");
                     
                     writer.WritePhysicsMaterials(materials);
                     pbPatch.Value = 60;
@@ -677,9 +674,9 @@ namespace Scrapcenter
                 finally
                 {
                     foreach (ZipFile f in modZipFiles.Values)
-                    {
                         f.Dispose();
-                    }
+                    
+                    btnPatchGame.Enabled = false;
                 }
             }
         }

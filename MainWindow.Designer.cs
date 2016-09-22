@@ -45,9 +45,6 @@
             this.menuBtnMods = new System.Windows.Forms.Label();
             this.menuBtnHome = new System.Windows.Forms.Label();
             this.content = new System.Windows.Forms.Panel();
-            this.mainPanelSkins = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lblSkindexAvailableSoon = new System.Windows.Forms.Label();
             this.mainPanelMods = new System.Windows.Forms.Panel();
             this.pblDropModsWrapper = new System.Windows.Forms.Panel();
             this.pnlDragNDrop = new System.Windows.Forms.Panel();
@@ -77,14 +74,8 @@
             this.btnModUp = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnModDown = new System.Windows.Forms.Button();
-            this.mainPanelHome = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pnlRecentBlogPosts = new System.Windows.Forms.Panel();
-            this.wbBlog = new System.Windows.Forms.WebBrowser();
             this.mainPanelBackups = new System.Windows.Forms.Panel();
+            this.cbUsers = new System.Windows.Forms.ComboBox();
             this.lblHideBackups = new System.Windows.Forms.Label();
             this.btnManageBackups = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -98,24 +89,36 @@
             this.chWorldName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chLastModified = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chLatestBackup = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mainPanelSkins = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblSkindexAvailableSoon = new System.Windows.Forms.Label();
+            this.mainPanelHome = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlRecentBlogPosts = new System.Windows.Forms.Panel();
+            this.wbBlog = new System.Windows.Forms.WebBrowser();
             this.mainPanelTutorials = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbUsers = new System.Windows.Forms.ComboBox();
+            this.ttContributors = new System.Windows.Forms.ToolTip(this.components);
+            this.lblModCopyright = new System.Windows.Forms.Label();
+            this.lblInfoSkins = new System.Windows.Forms.Label();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuBar.SuspendLayout();
             this.content.SuspendLayout();
-            this.mainPanelSkins.SuspendLayout();
             this.mainPanelMods.SuspendLayout();
             this.pblDropModsWrapper.SuspendLayout();
             this.pnlPatchStatus.SuspendLayout();
             this.pnlModsLeft.SuspendLayout();
             this.pnlCurModInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModIcon)).BeginInit();
+            this.mainPanelBackups.SuspendLayout();
+            this.mainPanelSkins.SuspendLayout();
             this.mainPanelHome.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlRecentBlogPosts.SuspendLayout();
-            this.mainPanelBackups.SuspendLayout();
             this.mainPanelTutorials.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,9 +241,9 @@
             // content
             // 
             this.content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.content.Controls.Add(this.mainPanelBackups);
             this.content.Controls.Add(this.mainPanelSkins);
             this.content.Controls.Add(this.mainPanelMods);
+            this.content.Controls.Add(this.mainPanelBackups);
             this.content.Controls.Add(this.mainPanelHome);
             this.content.Controls.Add(this.mainPanelTutorials);
             this.content.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -248,41 +251,6 @@
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(1346, 519);
             this.content.TabIndex = 1;
-            // 
-            // mainPanelSkins
-            // 
-            this.mainPanelSkins.Controls.Add(this.button2);
-            this.mainPanelSkins.Controls.Add(this.lblSkindexAvailableSoon);
-            this.mainPanelSkins.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanelSkins.Location = new System.Drawing.Point(0, 0);
-            this.mainPanelSkins.Name = "mainPanelSkins";
-            this.mainPanelSkins.Size = new System.Drawing.Size(1346, 519);
-            this.mainPanelSkins.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(496, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(316, 48);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Open AuxLux\' Skin Creator";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.S_OpenCreator);
-            // 
-            // lblSkindexAvailableSoon
-            // 
-            this.lblSkindexAvailableSoon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSkindexAvailableSoon.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSkindexAvailableSoon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSkindexAvailableSoon.Location = new System.Drawing.Point(0, 57);
-            this.lblSkindexAvailableSoon.Name = "lblSkindexAvailableSoon";
-            this.lblSkindexAvailableSoon.Size = new System.Drawing.Size(1346, 462);
-            this.lblSkindexAvailableSoon.TabIndex = 0;
-            this.lblSkindexAvailableSoon.Text = "The skindex is still under development, and will be available as soon as possible" +
-    "!";
-            this.lblSkindexAvailableSoon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mainPanelMods
             // 
@@ -431,6 +399,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlCurModInfo.BackColor = System.Drawing.Color.White;
             this.pnlCurModInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCurModInfo.Controls.Add(this.lblModCopyright);
             this.pnlCurModInfo.Controls.Add(this.lblAuthor);
             this.pnlCurModInfo.Controls.Add(this.llblModURL);
             this.pnlCurModInfo.Controls.Add(this.lblListRequiredMods);
@@ -610,82 +579,6 @@
             this.btnModDown.UseVisualStyleBackColor = true;
             this.btnModDown.Click += new System.EventHandler(this.btnModDown_Click);
             // 
-            // mainPanelHome
-            // 
-            this.mainPanelHome.Controls.Add(this.panel2);
-            this.mainPanelHome.Controls.Add(this.pnlRecentBlogPosts);
-            this.mainPanelHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanelHome.Location = new System.Drawing.Point(0, 0);
-            this.mainPanelHome.Name = "mainPanelHome";
-            this.mainPanelHome.Size = new System.Drawing.Size(1346, 519);
-            this.mainPanelHome.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(544, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(802, 519);
-            this.panel2.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(783, 278);
-            this.label5.TabIndex = 5;
-            this.label5.Text = resources.GetString("label5.Text");
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(10, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(780, 45);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Browse mods on the internet";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.H_BrowseMods);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(793, 52);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Scrapcenter is still under development";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlRecentBlogPosts
-            // 
-            this.pnlRecentBlogPosts.BackColor = System.Drawing.Color.White;
-            this.pnlRecentBlogPosts.Controls.Add(this.wbBlog);
-            this.pnlRecentBlogPosts.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlRecentBlogPosts.Location = new System.Drawing.Point(0, 0);
-            this.pnlRecentBlogPosts.Name = "pnlRecentBlogPosts";
-            this.pnlRecentBlogPosts.Size = new System.Drawing.Size(544, 519);
-            this.pnlRecentBlogPosts.TabIndex = 2;
-            // 
-            // wbBlog
-            // 
-            this.wbBlog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wbBlog.Location = new System.Drawing.Point(0, 0);
-            this.wbBlog.MinimumSize = new System.Drawing.Size(20, 20);
-            this.wbBlog.Name = "wbBlog";
-            this.wbBlog.Size = new System.Drawing.Size(544, 519);
-            this.wbBlog.TabIndex = 1;
-            this.wbBlog.Url = new System.Uri("http://scrapcenter.net/blog/cleanview", System.UriKind.Absolute);
-            // 
             // mainPanelBackups
             // 
             this.mainPanelBackups.Controls.Add(this.cbUsers);
@@ -704,6 +597,15 @@
             this.mainPanelBackups.Name = "mainPanelBackups";
             this.mainPanelBackups.Size = new System.Drawing.Size(1346, 519);
             this.mainPanelBackups.TabIndex = 2;
+            // 
+            // cbUsers
+            // 
+            this.cbUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUsers.FormattingEnabled = true;
+            this.cbUsers.Location = new System.Drawing.Point(3, 6);
+            this.cbUsers.Name = "cbUsers";
+            this.cbUsers.Size = new System.Drawing.Size(393, 21);
+            this.cbUsers.TabIndex = 11;
             // 
             // lblHideBackups
             // 
@@ -834,6 +736,118 @@
             this.chLatestBackup.Text = "Latest backup";
             this.chLatestBackup.Width = 189;
             // 
+            // mainPanelSkins
+            // 
+            this.mainPanelSkins.Controls.Add(this.lblInfoSkins);
+            this.mainPanelSkins.Controls.Add(this.button2);
+            this.mainPanelSkins.Controls.Add(this.lblSkindexAvailableSoon);
+            this.mainPanelSkins.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanelSkins.Location = new System.Drawing.Point(0, 0);
+            this.mainPanelSkins.Name = "mainPanelSkins";
+            this.mainPanelSkins.Size = new System.Drawing.Size(1346, 519);
+            this.mainPanelSkins.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(496, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(316, 48);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Open AuxLux\' Skin Creator";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.S_OpenCreator);
+            // 
+            // lblSkindexAvailableSoon
+            // 
+            this.lblSkindexAvailableSoon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSkindexAvailableSoon.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSkindexAvailableSoon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSkindexAvailableSoon.Location = new System.Drawing.Point(0, 114);
+            this.lblSkindexAvailableSoon.Name = "lblSkindexAvailableSoon";
+            this.lblSkindexAvailableSoon.Size = new System.Drawing.Size(1346, 405);
+            this.lblSkindexAvailableSoon.TabIndex = 0;
+            this.lblSkindexAvailableSoon.Text = "The skindex is still under development, and will be available as soon as possible" +
+    "!";
+            this.lblSkindexAvailableSoon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mainPanelHome
+            // 
+            this.mainPanelHome.Controls.Add(this.panel2);
+            this.mainPanelHome.Controls.Add(this.pnlRecentBlogPosts);
+            this.mainPanelHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanelHome.Location = new System.Drawing.Point(0, 0);
+            this.mainPanelHome.Name = "mainPanelHome";
+            this.mainPanelHome.Size = new System.Drawing.Size(1346, 519);
+            this.mainPanelHome.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(544, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(802, 519);
+            this.panel2.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(783, 278);
+            this.label5.TabIndex = 5;
+            this.label5.Text = resources.GetString("label5.Text");
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(10, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(780, 45);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Browse mods on the internet";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.H_BrowseMods);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(793, 52);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Scrapcenter is still under development";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlRecentBlogPosts
+            // 
+            this.pnlRecentBlogPosts.BackColor = System.Drawing.Color.White;
+            this.pnlRecentBlogPosts.Controls.Add(this.wbBlog);
+            this.pnlRecentBlogPosts.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlRecentBlogPosts.Location = new System.Drawing.Point(0, 0);
+            this.pnlRecentBlogPosts.Name = "pnlRecentBlogPosts";
+            this.pnlRecentBlogPosts.Size = new System.Drawing.Size(544, 519);
+            this.pnlRecentBlogPosts.TabIndex = 2;
+            // 
+            // wbBlog
+            // 
+            this.wbBlog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbBlog.Location = new System.Drawing.Point(0, 0);
+            this.wbBlog.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbBlog.Name = "wbBlog";
+            this.wbBlog.Size = new System.Drawing.Size(544, 519);
+            this.wbBlog.TabIndex = 1;
+            this.wbBlog.Url = new System.Uri("http://scrapcenter.net/blog/cleanview", System.UriKind.Absolute);
+            // 
             // mainPanelTutorials
             // 
             this.mainPanelTutorials.Controls.Add(this.label4);
@@ -855,14 +869,28 @@
             this.label4.Text = "There are no tutorials yet.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // lblModCopyright
             // 
-            this.cbUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUsers.FormattingEnabled = true;
-            this.cbUsers.Location = new System.Drawing.Point(3, 6);
-            this.cbUsers.Name = "comboBox1";
-            this.cbUsers.Size = new System.Drawing.Size(393, 21);
-            this.cbUsers.TabIndex = 11;
+            this.lblModCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblModCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModCopyright.Location = new System.Drawing.Point(6, 396);
+            this.lblModCopyright.Name = "lblModCopyright";
+            this.lblModCopyright.Size = new System.Drawing.Size(198, 65);
+            this.lblModCopyright.TabIndex = 19;
+            this.lblModCopyright.Text = "Please remember copyright belongs to all repsective authors. Distributing this mo" +
+    "d without the authors permission is not allowed.";
+            // 
+            // lblInfoSkins
+            // 
+            this.lblInfoSkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoSkins.Location = new System.Drawing.Point(494, 57);
+            this.lblInfoSkins.Name = "lblInfoSkins";
+            this.lblInfoSkins.Size = new System.Drawing.Size(318, 57);
+            this.lblInfoSkins.TabIndex = 3;
+            this.lblInfoSkins.Text = "Skins can be installed after mods have been installed, by following the instructi" +
+    "ons on the Skin Creator page.";
+            this.lblInfoSkins.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainWindow
             // 
@@ -883,7 +911,6 @@
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
             this.content.ResumeLayout(false);
-            this.mainPanelSkins.ResumeLayout(false);
             this.mainPanelMods.ResumeLayout(false);
             this.pblDropModsWrapper.ResumeLayout(false);
             this.pnlPatchStatus.ResumeLayout(false);
@@ -892,11 +919,12 @@
             this.pnlCurModInfo.ResumeLayout(false);
             this.pnlCurModInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModIcon)).EndInit();
+            this.mainPanelBackups.ResumeLayout(false);
+            this.mainPanelBackups.PerformLayout();
+            this.mainPanelSkins.ResumeLayout(false);
             this.mainPanelHome.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlRecentBlogPosts.ResumeLayout(false);
-            this.mainPanelBackups.ResumeLayout(false);
-            this.mainPanelBackups.PerformLayout();
             this.mainPanelTutorials.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -971,6 +999,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbUsers;
+        private System.Windows.Forms.ToolTip ttContributors;
+        private System.Windows.Forms.Label lblModCopyright;
+        private System.Windows.Forms.Label lblInfoSkins;
     }
 }
 
