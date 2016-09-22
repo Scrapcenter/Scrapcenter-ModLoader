@@ -49,11 +49,6 @@ namespace Scrapcenter.GameObjects
 
                 if (jsonDict.ContainsKey("mat"))
                 {
-                    try
-                    {
-                        Console.WriteLine(((List<object>)jsonDict["mat"]).Count);
-                    }
-                    catch { }
                     if (jsonDict["mat"] is string)
                     {
                         this.RenderMaterial.Add(jsonDict["mat"].ToString());
@@ -80,8 +75,6 @@ namespace Scrapcenter.GameObjects
                 if (jsonDict.ContainsKey("color"))
                 {
                     this.Color = RgbColor.FromHtmlNotation(jsonDict["color"].ToString());
-                    if (this.Color == null)
-                        throw new Exception("");
                 }
                 
                 // Collision
@@ -251,7 +244,10 @@ namespace Scrapcenter.GameObjects
             }
 
             writer.WritePropertyName("color");
-            writer.WriteValue(this.Color.GetHex());
+            if (this.Color == null)
+                writer.WriteValue("");
+            else
+               writer.WriteValue(this.Color.GetHex());
 
             if (this.Feature != null)
             {
