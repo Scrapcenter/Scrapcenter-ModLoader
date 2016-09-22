@@ -99,9 +99,9 @@ namespace Scrapcenter
             foreach (KeyValuePair<string, byte[]> kvp in resources)
             {
                 string path = kvp.Key.Replace('/', Path.DirectorySeparatorChar);
-                string directoryPath = path.Substring(0, path.LastIndexOf(Path.DirectorySeparatorChar));
-                if (!Directory.Exists(directoryPath))
-                    Directory.CreateDirectory(directoryPath);
+                string destDir = Path.Combine(this.GameDir, "Data", path.Substring(0, path.LastIndexOf(Path.DirectorySeparatorChar)));
+                if (!Directory.Exists(destDir))
+                    Directory.CreateDirectory(destDir);
 
                 using (FileStream stream = File.OpenWrite(Path.Combine(this.GameDir, "Data", kvp.Key)))
                     using (BinaryWriter writer = new BinaryWriter(stream))
