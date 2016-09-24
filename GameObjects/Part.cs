@@ -17,9 +17,11 @@ namespace Scrapcenter.GameObjects
         public Guid ItemUuid;
         string MeshFileName = "";
         List<string> RenderMaterial = new List<string>();
-        string TextureDif = "";
-        string TextureAsg = "";
-        string TextureNor = "";
+        
+        string TextureDif = null;
+        string TextureAsg = null;
+        string TextureNor = null;
+
         RotationSet RotationSet = null;
         List<Axis> PositiveStickyAxes = new List<Axis>();
         List<Axis> NegativeStickyAxes = new List<Axis>();
@@ -218,17 +220,20 @@ namespace Scrapcenter.GameObjects
                     writer.WriteEndArray();
                 }
             }
-            
-            writer.WritePropertyName("dif");
-            writer.WriteValue(this.TextureDif);
 
-            if (this.TextureAsg != "")
+            if (this.TextureDif != null)
+            {
+                writer.WritePropertyName("dif");
+                writer.WriteValue(this.TextureDif);
+            }
+
+            if (this.TextureAsg != null)
             {
                 writer.WritePropertyName("asg");
                 writer.WriteValue(this.TextureAsg);
             }
 
-            if (this.TextureNor != "")
+            if (this.TextureNor != null)
             {
                 writer.WritePropertyName("nor");
                 writer.WriteValue(this.TextureNor);
