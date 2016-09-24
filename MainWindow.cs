@@ -79,7 +79,7 @@ namespace Scrapcenter
 
         void FixSmPath(bool first = true, string prev = null)
         {
-            if (first == false)
+            if (first == true)
             {
                 DialogResult r = MessageBox.Show("The Scrap Mechanic installation folder could not be found. Please locate it manually", "Scrap Mechanic folder could not be found", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (r != DialogResult.OK)
@@ -94,14 +94,21 @@ namespace Scrapcenter
             if (r2 == DialogResult.OK)
             {
                 if (Directory.Exists(d.SelectedPath))
+                {
                     Properties.Settings.Default.ScrapMechanicFolder = d.SelectedPath;
+                    return;
+                }
                 else
                 {
                     DialogResult r3 = MessageBox.Show("The located path is not accessible by Scrapcenter. Please try again.", "Not accessible", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                     if (r3 == DialogResult.OK)
                         FixSmPath(false, d.SelectedPath);
+                    else
+                        Application.Exit();
                 }
             }
+            else
+                Application.Exit();
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
