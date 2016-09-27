@@ -45,6 +45,10 @@
             this.menuBtnMods = new System.Windows.Forms.Label();
             this.menuBtnHome = new System.Windows.Forms.Label();
             this.content = new System.Windows.Forms.Panel();
+            this.mainPanelSkins = new System.Windows.Forms.Panel();
+            this.lblInfoSkins = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblSkindexAvailableSoon = new System.Windows.Forms.Label();
             this.mainPanelMods = new System.Windows.Forms.Panel();
             this.pblDropModsWrapper = new System.Windows.Forms.Panel();
             this.pnlDragNDrop = new System.Windows.Forms.Panel();
@@ -59,6 +63,7 @@
             this.lvInstalledMods = new System.Windows.Forms.ListView();
             this.modLogoImageList = new System.Windows.Forms.ImageList(this.components);
             this.pnlCurModInfo = new System.Windows.Forms.Panel();
+            this.lblModCopyright = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.llblModURL = new System.Windows.Forms.LinkLabel();
             this.lblListRequiredMods = new System.Windows.Forms.Label();
@@ -89,9 +94,6 @@
             this.chWorldName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chLastModified = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chLatestBackup = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mainPanelSkins = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lblSkindexAvailableSoon = new System.Windows.Forms.Label();
             this.mainPanelHome = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -100,14 +102,13 @@
             this.pnlRecentBlogPosts = new System.Windows.Forms.Panel();
             this.wbBlog = new System.Windows.Forms.WebBrowser();
             this.mainPanelTutorials = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.ttContributors = new System.Windows.Forms.ToolTip(this.components);
-            this.lblModCopyright = new System.Windows.Forms.Label();
-            this.lblInfoSkins = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuBar.SuspendLayout();
             this.content.SuspendLayout();
+            this.mainPanelSkins.SuspendLayout();
             this.mainPanelMods.SuspendLayout();
             this.pblDropModsWrapper.SuspendLayout();
             this.pnlPatchStatus.SuspendLayout();
@@ -115,7 +116,6 @@
             this.pnlCurModInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModIcon)).BeginInit();
             this.mainPanelBackups.SuspendLayout();
-            this.mainPanelSkins.SuspendLayout();
             this.mainPanelHome.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlRecentBlogPosts.SuspendLayout();
@@ -241,16 +241,63 @@
             // content
             // 
             this.content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.content.Controls.Add(this.mainPanelTutorials);
             this.content.Controls.Add(this.mainPanelSkins);
             this.content.Controls.Add(this.mainPanelMods);
             this.content.Controls.Add(this.mainPanelBackups);
             this.content.Controls.Add(this.mainPanelHome);
-            this.content.Controls.Add(this.mainPanelTutorials);
             this.content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content.Location = new System.Drawing.Point(0, 126);
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(1346, 519);
             this.content.TabIndex = 1;
+            // 
+            // mainPanelSkins
+            // 
+            this.mainPanelSkins.Controls.Add(this.lblInfoSkins);
+            this.mainPanelSkins.Controls.Add(this.button2);
+            this.mainPanelSkins.Controls.Add(this.lblSkindexAvailableSoon);
+            this.mainPanelSkins.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanelSkins.Location = new System.Drawing.Point(0, 0);
+            this.mainPanelSkins.Name = "mainPanelSkins";
+            this.mainPanelSkins.Size = new System.Drawing.Size(1346, 519);
+            this.mainPanelSkins.TabIndex = 1;
+            // 
+            // lblInfoSkins
+            // 
+            this.lblInfoSkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoSkins.Location = new System.Drawing.Point(494, 57);
+            this.lblInfoSkins.Name = "lblInfoSkins";
+            this.lblInfoSkins.Size = new System.Drawing.Size(318, 57);
+            this.lblInfoSkins.TabIndex = 3;
+            this.lblInfoSkins.Text = "Skins can be installed after mods have been installed, by following the instructi" +
+    "ons on the Skin Creator page.";
+            this.lblInfoSkins.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(496, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(316, 48);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Open AuxLux\' Skin Creator";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.S_OpenCreator);
+            // 
+            // lblSkindexAvailableSoon
+            // 
+            this.lblSkindexAvailableSoon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSkindexAvailableSoon.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSkindexAvailableSoon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSkindexAvailableSoon.Location = new System.Drawing.Point(0, 114);
+            this.lblSkindexAvailableSoon.Name = "lblSkindexAvailableSoon";
+            this.lblSkindexAvailableSoon.Size = new System.Drawing.Size(1346, 405);
+            this.lblSkindexAvailableSoon.TabIndex = 0;
+            this.lblSkindexAvailableSoon.Text = "The skindex is still under development, and will be available as soon as possible" +
+    "!";
+            this.lblSkindexAvailableSoon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mainPanelMods
             // 
@@ -420,6 +467,18 @@
             this.pnlCurModInfo.Size = new System.Drawing.Size(216, 513);
             this.pnlCurModInfo.TabIndex = 4;
             this.pnlCurModInfo.Visible = false;
+            // 
+            // lblModCopyright
+            // 
+            this.lblModCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblModCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModCopyright.Location = new System.Drawing.Point(6, 396);
+            this.lblModCopyright.Name = "lblModCopyright";
+            this.lblModCopyright.Size = new System.Drawing.Size(198, 65);
+            this.lblModCopyright.TabIndex = 19;
+            this.lblModCopyright.Text = "Please remember copyright belongs to all repsective authors. Distributing this mo" +
+    "d without the authors permission is not allowed.";
             // 
             // lblAuthor
             // 
@@ -736,42 +795,6 @@
             this.chLatestBackup.Text = "Latest backup";
             this.chLatestBackup.Width = 189;
             // 
-            // mainPanelSkins
-            // 
-            this.mainPanelSkins.Controls.Add(this.lblInfoSkins);
-            this.mainPanelSkins.Controls.Add(this.button2);
-            this.mainPanelSkins.Controls.Add(this.lblSkindexAvailableSoon);
-            this.mainPanelSkins.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanelSkins.Location = new System.Drawing.Point(0, 0);
-            this.mainPanelSkins.Name = "mainPanelSkins";
-            this.mainPanelSkins.Size = new System.Drawing.Size(1346, 519);
-            this.mainPanelSkins.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(496, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(316, 48);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Open AuxLux\' Skin Creator";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.S_OpenCreator);
-            // 
-            // lblSkindexAvailableSoon
-            // 
-            this.lblSkindexAvailableSoon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSkindexAvailableSoon.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSkindexAvailableSoon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSkindexAvailableSoon.Location = new System.Drawing.Point(0, 114);
-            this.lblSkindexAvailableSoon.Name = "lblSkindexAvailableSoon";
-            this.lblSkindexAvailableSoon.Size = new System.Drawing.Size(1346, 405);
-            this.lblSkindexAvailableSoon.TabIndex = 0;
-            this.lblSkindexAvailableSoon.Text = "The skindex is still under development, and will be available as soon as possible" +
-    "!";
-            this.lblSkindexAvailableSoon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // mainPanelHome
             // 
             this.mainPanelHome.Controls.Add(this.panel2);
@@ -850,47 +873,22 @@
             // 
             // mainPanelTutorials
             // 
-            this.mainPanelTutorials.Controls.Add(this.label4);
+            this.mainPanelTutorials.Controls.Add(this.webBrowser1);
             this.mainPanelTutorials.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanelTutorials.Location = new System.Drawing.Point(0, 0);
             this.mainPanelTutorials.Name = "mainPanelTutorials";
             this.mainPanelTutorials.Size = new System.Drawing.Size(1346, 519);
             this.mainPanelTutorials.TabIndex = 1;
             // 
-            // label4
+            // webBrowser1
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1346, 519);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "There are no tutorials yet.";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblModCopyright
-            // 
-            this.lblModCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblModCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModCopyright.Location = new System.Drawing.Point(6, 396);
-            this.lblModCopyright.Name = "lblModCopyright";
-            this.lblModCopyright.Size = new System.Drawing.Size(198, 65);
-            this.lblModCopyright.TabIndex = 19;
-            this.lblModCopyright.Text = "Please remember copyright belongs to all repsective authors. Distributing this mo" +
-    "d without the authors permission is not allowed.";
-            // 
-            // lblInfoSkins
-            // 
-            this.lblInfoSkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoSkins.Location = new System.Drawing.Point(494, 57);
-            this.lblInfoSkins.Name = "lblInfoSkins";
-            this.lblInfoSkins.Size = new System.Drawing.Size(318, 57);
-            this.lblInfoSkins.TabIndex = 3;
-            this.lblInfoSkins.Text = "Skins can be installed after mods have been installed, by following the instructi" +
-    "ons on the Skin Creator page.";
-            this.lblInfoSkins.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1346, 519);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("http://www.scrapcenter.net/clean/tutorials", System.UriKind.Absolute);
             // 
             // MainWindow
             // 
@@ -911,6 +909,7 @@
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
             this.content.ResumeLayout(false);
+            this.mainPanelSkins.ResumeLayout(false);
             this.mainPanelMods.ResumeLayout(false);
             this.pblDropModsWrapper.ResumeLayout(false);
             this.pnlPatchStatus.ResumeLayout(false);
@@ -921,7 +920,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbModIcon)).EndInit();
             this.mainPanelBackups.ResumeLayout(false);
             this.mainPanelBackups.PerformLayout();
-            this.mainPanelSkins.ResumeLayout(false);
             this.mainPanelHome.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlRecentBlogPosts.ResumeLayout(false);
@@ -993,7 +991,6 @@
         private System.Windows.Forms.ColumnHeader chWorldName;
         private System.Windows.Forms.ColumnHeader chLastModified;
         private System.Windows.Forms.ColumnHeader chLatestBackup;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblHideBackups;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
@@ -1002,6 +999,7 @@
         private System.Windows.Forms.ToolTip ttContributors;
         private System.Windows.Forms.Label lblModCopyright;
         private System.Windows.Forms.Label lblInfoSkins;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 
