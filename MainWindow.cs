@@ -32,7 +32,7 @@ namespace Scrapcenter
             Backups
         }
 
-        const string CURRENT_VERSION_ID = "2";
+        const string CURRENT_VERSION_ID = "3";
         const string LATEST_VERSION_URL = "http://scrapcenter.net/latestversion.php?product=scrapcenter";
 
         #region Variables
